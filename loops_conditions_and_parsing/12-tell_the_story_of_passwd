@@ -1,5 +1,4 @@
-#!/bin/bash
-
+#!/bin/bash#
 # This script reads and formats /etc/passwd content into a story
 
 IFS=":"
