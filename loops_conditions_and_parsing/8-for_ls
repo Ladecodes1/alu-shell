@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# This script lists the contents of the current directory, removing everything before the first dash in filenames.
+
+for file in *; do
+  # Skip hidden files
+  if [[ "$file" == .* ]]; then
+    continue
+  fi
+
+  # Remove everything before and including the first dash if present
+  modified_name="${file#*-}"
+
+  # If no dash is found, keep the original filename
+  if [[ "$modified_name" == "$file" ]]; then
+    echo "$file"
+  else
+    echo "$modified_name"
+  fi
+done
