@@ -1,2 +1,2 @@
 #!/bin/bash
-if [ "$(ls -l hello | cut -d ' ' -f 3)" = "guillaume" ] then chown vincent hello fi
+chown --from=guillaume vincent hello
